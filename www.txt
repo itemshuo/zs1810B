@@ -1,0 +1,65 @@
+tollbar，侧滑，TabLayout：  implementation 'com.android.support:design:27.1.1'
+fastjson：                  implementation 'com.alibaba:fastjson:1.1.54.android'
+recyclerview：              implementation 'com.android.support:recyclerview-v7:27.1.1'
+gson：                      implementation 'com.google.code.gson:gson:2.2.4'
+banner图片轮转：            implementation 'com.youth.banner:banner:1.4.10'  
+glide图片加载框架：         implementation 'com.github.bumptech.glide:glide:3.7.0'
+ implementation 'com.github.bumptech.glide:glide:4.9.0'
+cardview                    implementation 'com.android.support:cardview-v7:27.1.1'
+OKhttp			    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+retrofit                    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+gson解析器                  implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+
+上啦加载                    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
+			    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-7'
+
+RXjava                      implementation 'io.reactivex.rxjava2:rxjava:2.2.4'
+   			    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+ 			    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'//配合Rxjava 使用
+
+数据库：
+	implementation 'org.greenrobot:greendao:3.2.2'
+	apply plugin: 'org.greenrobot.greendao' // apply plugin
+ //自定义生成路径 daoPackage 'a.b.c'
+    greendao {
+        schemaVersion 1
+        daoPackage 'com.example.asus.day04_greendao.dao'
+        targetGenDir 'src/main/java'
+   	      }
+	 mavenCentral()//添加的代码
+	 classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2' // add plugin
+
+
+ //记得这个需要添加design依赖,如果不加它会添加23.4.0依赖
+xrecyclerview              implementation 'com.jcodecraeer:xrecyclerview:1.5.9'
+
+福利接口:https://gank.io/api/data/%E7%A6%8F%E5%88%A9/10/1
+http://www.93.gov.cn/93app/data.do?channelId=2&startNum=0
+
+
+
+通知：
+NotificationManager service = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        Notification notification = new NotificationCompat.Builder(context, "111")
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentText(gb)
+                .setContentTitle("2222")
+                .build();
+        service.notify(1,notification);
+
+广播跳页面
+Intent intent1 = new Intent(context, Xiangmu.class);
+        intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent1);
+
+pop：
+  PopupWindow pop = new PopupWindow(View, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        pop.setBackgroundDrawable(new BitmapDrawable());
+        pop.setOutsideTouchable(true);
+        pop.showAsDropDown("","");
+滑动：
+main_iv.setImageResource(list.get(position));
+        if (position==list.size()-1) {
+            main_bt.setVisibility(View.VISIBLE);
+        }
+        container.addView(view);
