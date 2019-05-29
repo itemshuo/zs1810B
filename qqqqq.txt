@@ -63,3 +63,8 @@ main_iv.setImageResource(list.get(position));
             main_bt.setVisibility(View.VISIBLE);
         }
         container.addView(view);
+
+
+
+Ñ¦Óî³¬¹·Àº×Ó
+
